@@ -1,0 +1,23 @@
+[project]
+name = "condohub-api"
+version = "0.1.0"
+description = "API da POC CondoHub: reserva de áreas comuns e manutenção"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "sqlalchemy>=2.0.30",
+    "psycopg[binary]>=3.2",
+    "pydantic-settings>=2.4",
+    "alembic>=1.13",
+    "tzdata>=2024.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "httpx>=0.27",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
